@@ -1,0 +1,26 @@
+body {
+  background-image: url(images/Margo.jpg);
+}
+.butt {
+  margin: 10px 0 10px 10px;
+}
+#phrases {
+  width: 600px;
+  background: #68391d;
+  /* background: #743716; */
+  padding: 30px;
+}
+
+#phrases h3 {
+  color: #fff5d6;
+  font-family: "Titillium Web", sans-serif;
+}
+#phrases h6 {
+  color: #fff5b2;
+  font-family: "Titillium Web", sans-serif;
+}
+
+button {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}

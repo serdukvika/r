@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+	
+
+
+</head>
+
+<body>
+<div class="container">
+
+  <button onclick="guessLetter()" class="btn btn-dark butt" >Статьи</button>
+  <div id="phrases" ></div>
+</div>
+	<script>
+    let colors = ["#FFF9E6"];
+		let phrases = [
+			"<h3>Взаимодействие: alert, prompt, confirm:</h3></br><h6>alert</h6> показывает сообщение и ждёт, пока пользователь нажмёт кнопку «ОК».Это небольшое окно с сообщением называется модальным окном. Понятие модальное означает, что пользователь не может взаимодействовать с интерфейсом остальной части страницы, нажимать на другие кнопки и т.д. до тех пор, пока взаимодействует с окном. В данном случае – пока не будет нажата кнопка «OK».</br><h6>prompt </h6>принимает два аргумента: <strong>title</strong>-Текст для отображения в окне.<strong>default</strong>-Необязательный второй параметр, который устанавливает начальное значение в поле для текста в окне.Пользователь может напечатать что-либо в поле ввода и нажать OK. Введённый текст будет присвоен переменной result. Пользователь также может отменить ввод нажатием на кнопку «Отмена» или нажав на клавишу Esc. В этом случае значением result станет null.Вызов prompt возвращает текст, указанный в поле для ввода, или null, если ввод отменён пользователем.</br><h6>confirm</h6>отображает модальное окно с текстом вопроса question и двумя кнопками: OK и Отмена. Результат – <strong>true</strong>, если нажата кнопка OK. В других случаях – <strong>false</strong>.", "<h3>Переменные:</h3></br>Можно объявить при помощи: <strong>letconst</strong> (константа, т.е. изменению не подлежит) <strong>var</strong> (устаревший способ)Имя переменной может включать:Буквы и цифры, однако цифра не может быть первым символом Символы $ и _ используются наряду с буквами.Иероглифы и символы нелатинского алфавита также допустимы, но обычно не используются.<h6>Всего существует 8 типов данных:</h6> <strong>number</strong> для целых и вещественных чисел</br> <strong>bigint</strong> для работы с целыми числами произвольной длины</br> <strong>string</strong> для строк boolean для логических значений истинности или ложности: true/false,null – тип с единственным значением </br><strong>null</strong> т.е. «пустое значение» или «значение не существует»</br> <strong>undefined</strong> – тип с единственным значением undefined, т.е. «значение не задано»</br> <strong>object и symbol</strong> – сложные структуры данных и уникальные идентификаторы; их мы ещё не изучили.</br><strong>Оператор typeof</strong> возвращает тип значения переменной, с двумя исключениями", "<h3>Функции:</h3></br>Зачастую нам надо повторять одно и то же действие во многих частях программы.Например, необходимо красиво вывести сообщение при приветствии посетителя, при выходе посетителя с сайта, ещё где-нибудь.Чтобы не повторять один и тот же код во многих местах, придуманы функции. </br>Функции являются основными «строительными блоками» программы.Примеры встроенных функций вы уже видели – это <strong>alert(message)</strong>, <strong>prompt(message, default)</strong> и <strong>confirm(question)</strong>. Но можно создавать и свои.</br>Объявление функции</br>Для создания функций мы можем использовать объявление функции.Вначале идёт ключевое слово function, после него имя функции, затем список параметров в круглых скобках через запятую (в вышеприведённом примере он пустой) и, наконец, код функции, также называемый «телом функции», внутри фигурных скобок."
+    ]
+  //  function container(){
+  //   var randomIndex = Math.floor(Math.random() * container.length);
+	// 		phr.innerHTML = container[randomIndex];
+  //  }
+		function guessLetter() {
+			var randomIndex = Math.floor(Math.random() * phrases.length);
+			phr.style.color = colors[0];
+			phr.innerHTML = phrases[randomIndex];
+		}
+    let phr = document.getElementById("phrases");
+ 
+// (function(){
+//   let div= document.getElementByClassName("phrases"),
+//   style=div[0].style;
+// style.color="red";
+// })();
+
+
+
+
+
+	</script>
+</body>
+
+</html>
